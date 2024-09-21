@@ -13,7 +13,7 @@
 }
 
 body {
-  background-image: url('down.jpg');
+  background-image: url('./ev/down.jpg');
   background-size: contain;
 }
 
