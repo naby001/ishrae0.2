@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty and Staff</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-content h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .card-content p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+        #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333; /* Adjust this as needed */
+    z-index: 1000; /* Keeps the navbar on top of other content */
+}
+
+#navbar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#navbar nav ul li {
+    display: inline;
+}
+
+#navbar nav ul li a {
+    color: white; /* Adjust text color */
+    text-decoration: none;
+    padding: 10px;
+}
+
+.logo {
+    height: 50px; /* Adjust height as needed */
+    vertical-align: middle;
+}
+
+/* Add some padding to the body to ensure content is not hidden behind the navbar */
+body {
+    padding-top: 70px; /* Adjust according to the navbar height */
+}
+
+        
+    </style>
+  
+</head>
+<body>
+    <div>
+
+        <header id="navbar">
+            <nav>
+                <ul>
+                    <li>
+                        <img src="ishju-removebg-preview.png" alt="Logo" class="logo">
+                        ISHRAE JU
+                    </li>
+                    <li><a href="navbar.html" class="r">Home</a></li>
+                    <li><a href="navbar.html#about" class="b">About</a></li>
+                    <li><a href="events.html" class="g">Events</a></li>
+                    <li><a href="member.html" class="y">Membership</a></li>
+                    <li><a href="competiton.html" class="y">Competition</a></li>
+                    <li><a href="achievements.html" class="y">Achievement</a></li>
+                    <li><a href="ourteam.html" class="y">Our team</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+    
+    <div class="container">
+        <h1>Faculty and Staff</h1>
+        <div id="staff-grid" class="grid">
+            <!-- Staff members will be dynamically inserted here -->
+        </div>
+    </div>
+    
+    
+
+    <script>
+        const staffMembers = [
+            {
+                name: "Dr. Jane Smith",
+                role: "Faculty Advisor",
+                imageUrl: "/ev/sov.jpg"
+            },
+            {
+                name: "John Doe",
+                role: "Faculty Advisor",
+                imageUrl: "/ev/acm.jpg"
+            },
+            {
+                name: "John Doe",
+                role: "President",
+                imageUrl: "/ev/mrin.jpg"
+            },
+            {
+                name: "Emily Johnson",
+                role: "Secretary",
+                imageUrl: "/ev/arijit.jpg"
+            },
+            {
+                name: "Michael Brown",
+                role: "Treasurer",
+                imageUrl: "/ev/kb.jpg"
+            },
+            {
+                name: "Nilendu",
+                role: "Events Coordinator",
+                imageUrl: "/ev/nilu.jpg"
+            },
+            {
+                name: "Nilendu",
+                role: "Events Coordinator",
+                imageUrl: "/ev/say.jpg"
+            },
+            {
+                name: "Dr. Robert Lee",
+                role: "SRPG IN CHAARGE ,HACKATHON IN CHARGE",
+                imageUrl: "/ev/soum.jpg"
+            },
+            {
+                name: "Sarah Williams",
+                role: "NSDC IN CHARGE",
+                imageUrl: "/ev/riv.jpg"
+            },
+            {
+                name: "Sarah Williams",
+                role: "HACKTHON IN CHARGE",
+                imageUrl: "/ev/hritam.jpg"
+            },
+            {
+                name: "Lisa Chen",
+                role: "NSDC IN CHARGE",
+                imageUrl: "/ev/nisant.jpg"
+            },
+            {
+                name: "Lisa Chen",
+                role: "SOCIAL IN CHARGE",
+                imageUrl: "/ev/rit.jpg"
+            },
+            {
+                name: "Lisa Chen",
+                role: "SOCIAL IN CHARGE",
+                imageUrl: "/ev/rachel.jpg"
+            },
+            {
+                name: "Lisa Chen",
+                role: "STRATEGIC COORDINATOR",
+                imageUrl: "/ev/himo.jpg"
+            },
+
+           
+            {
+                name: "Lisa Chen",
+                role: "Public Reach Incharge",
+                imageUrl: "/ev/amrita.jpg"
+            },
+            {
+                name: "Lisa Chen",
+                role: "Public Reach Incharge",
+                imageUrl: "/ev/srija.jpg"
+            }
+
+        ];
+
+        function createStaffCard(member) {
+            return `
+                <div class="card">
+                    <img src="${member.imageUrl}" alt="${member.name}">
+                    <div class="card-content">
+                        <h2>${member.name}</h2>
+                        <p>${member.role}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderStaffGrid() {
+            const gridElement = document.getElementById('staff-grid');
+            gridElement.innerHTML = staffMembers.map(createStaffCard).join('');
+        }
+
+        // Render the staff grid when the page loads
+        window.addEventListener('load', renderStaffGrid);
+    </script>
+</body>
+</html>

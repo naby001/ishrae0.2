@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISHRAE Jadavpur University Chapter Events</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #121212 ;
+            --text-color: #333;
+            --card-background: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .event-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .event-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .event-details {
+            padding: 1.5rem;
+        }
+
+        .event-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .event-description {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .event-date {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+     #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333; /* Adjust this as needed */
+    z-index: 1000; /* Keeps the navbar on top of other content */
+}
+
+#navbar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#navbar nav ul li {
+    display: inline;
+}
+
+#navbar nav ul li a {
+    color: white; /* Adjust text color */
+    text-decoration: none;
+    padding: 10px;
+}
+
+.logo {
+    height: 50px; /* Adjust height as needed */
+    vertical-align: middle;
+}
+
+/* Add some padding to the body to ensure content is not hidden behind the navbar */
+body {
+    padding-top: 70px; /* Adjust according to the navbar height */
+}
+
+    </style>
+    
+
+</head>
+<body>
+    <header id="navbar">
+        <nav>
+            <ul>
+                <li>
+                    <img src="ishju-removebg-preview.png" alt="Logo" class="logo">
+                    ISHRAE JU
+                </li>
+                <li><a href="navbar.html" class="r">Home</a></li>
+                <li><a href="navbar.html#about" class="b">About</a></li>
+                <li><a href="events.html" class="g">Events</a></li>
+                <li><a href="member.html" class="y">Membership</a></li>
+                <li><a href="competiton.html" class="y">Competition</a></li>
+                <li><a href="achievements.html" class="y">Achievement</a></li>
+                <li><a href="ourteam.html" class="y">Our team</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+
+    <div class="container">
+        <h1>ISHRAE Jadavpur University Chapter Events</h1>
+        <div class="events-grid" id="events-container"></div>
+    </div>
+
+    <script>
+        const events = [
+            {
+                title: "ISHRAE JU Placement Insight Series ",
+                description: "A series of interactive sessions with those who have placement and talk about their experiences and subsequent journey at Jadavpur University. ",
+                date: "2023-09-15",
+                image: "/ev/placement.jpeg"
+            },
+            {
+                title: "ISHRAE JU Alumni Interaction Series",
+                description: "A series of online interactive sessions where honorable Alumni of Jadavpur University, come and talk about their experiences at JU and subsequent JU journey. ",
+                date: "2023-10-02",
+                image: "/ev/alumini.jpeg"
+            },
+            {
+                title: "Tech Talk: Future of Sustainable Energy",
+                description: "A series of offline interactive sessions where honorable Alumni of Jadavpur University, come and talk about their different types of technical knowledge",
+                date: "2023-10-20",
+                image: "/ev/tech.jpeg"
+            },
+            {
+                title: "ISHRAE JU Knowledge Series",
+                description: "A platform that provides opportunity to the student members to explain certain interesting topics in lucid and presentable language. ",
+                date: "2023-11-05",
+                image: "/ev/knowledge.jpeg"
+            }
+           
+        ];
+
+        function createEventCard(event) {
+            return `
+                <div class="event-card">
+                    <img src="${event.image}" alt="${event.title}" class="event-image">
+                    <div class="event-details">
+                        <h2 class="event-title">${event.title}</h2>
+                        <p class="event-description">${event.description}</p>
+                        <p class="event-date">Date: ${event.date}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderEvents() {
+            const container = document.getElementById('events-container');
+            container.innerHTML = events.map(createEventCard).join('');
+        }
+
+        window.addEventListener('load', renderEvents);
+    </script>
+</body>
+</html>

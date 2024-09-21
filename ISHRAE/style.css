@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.logo{
+  top: 0%;
+  left: 1%;
+  width: 50px;
+  box-shadow: none; /* Remove any default shadow */
+    border: none; /* Remove any default border */
+    margin: 0; /* Ensure there's no extra space around the logo */
+    padding: 10; 
+}
+
+body {
+  background-image: url('down.jpg');
+  background-size: contain;
+}
+
+:root {
+  --r: rgb(230, 18, 18);
+  --g: rgb(21, 186, 21);
+  --b: rgb(17, 86, 206);
+  --y: #FFC200;
+  --fb: 'Baloo 2', sans-serif;
+
+}
+
+header {
+  background-color: aliceblue;
+  position: sticky;
+  top: 0;
+  padding: 1vh;
+  font-family: var(--fb);
+  font-weight: 600;
+  z-index: 1;
+}
+
+
+
+.boxes {
+  margin-top: 5vh;
+  height: 125vh;
+  background-image: url(https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?cs=srgb&dl=pexels-francesco-ungaro-281260.jpg&fm=jpg);
+  background-size: cover;
+  border-radius: 2vh;
+}
+
+.box {
+  width: 35%;
+  height: 110vh;
+  background-color: rgb(255, 255, 255, 0.5);
+  border-radius: 1vh;
+  position: relative;
+  left: 18vh;
+  top: 5vh;
+  display: inline-block;
+  margin-left: 10vh;
+  padding: 5vh;
+}
+
+.b1 {
+  font-family: var(--fb);
+  padding: 3vh;
+  margin-left: 7vh;
+  margin-right: 5vh;
+  word-spacing: 1vh;
+}
+
+img {
+  width: 60vh;
+  height: 40vh;
+  position: relative;
+  left: 10vh;
+  top: 5vh;
+  border-radius: 1vh;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px 2px black;
+}
+
+a {
+  color: rgb(27, 9, 185);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+footer {
+  background-color: aliceblue;
+  position: relative;
+  bottom: -20vh;
+}
+
+.container {
+  height: 60vh;
+  width: 80%;
+  backdrop-filter: blur(2px);
+
+  background-size: cover;
+  background-color: rgb(255, 255, 255, 0.5);
+  padding: 10vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  padding-top: 5vh;
+  border-radius: 5vh;
+  border: 1vh solid white;
+  font-family: Agbalumo;
+  position: relative;
+  left: 10vh;
+  word-spacing: 1vh;
+  color: #000000;
+
+}
+
+h3 {
+  color: white;
+  background-color: rgb(1, 5, 253);
+  width: 73vw;
+  border-radius: 1vh;
+  font-family: var(--fb);
+}
+
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(255, 255, 255);
+  text-shadow: -0.4px -0.4px 0 #000, 0.4px -0.4px 0 #000, -0.4px 0.4px 0 #000, 0.4px 0.4px 0 #000;
+
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+hr {
+  width: 70vw;
+  border-width: 0;
+  border-radius: 1vh;
+  background-color: white;
+  height: 0.5vh;
+}
+
+.box2 {
+  height: 300vh;
+  margin-bottom: 5vh;
+
+  background-image: url(https://t4.ftcdn.net/jpg/02/98/68/73/360_F_298687332_D0GAA6fAgr70NWtF8UKXPyLx0mTGug0x.jpg);
+  background-size: cover;
+}
+
+.b2 {
+  left: 10vh;
+  width: 50vh;
+  height: 75vh;
+  margin-top: 10vh;
+}
+
+label {
+  font-family: Agbalumo;
+  padding-top: 5vh;
+  color: rgb(46, 66, 248);
+  font-size: 10vh;
+  text-shadow: -0.5px -0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, 0.5px 0.5px 0 white;
+}
+
+.member {
+  width: 45vh;
+  height: 27vh;
+  position: relative;
+  left: 2vh;
+  top: 2vh;
+  color: white;
+  font-weight: 600;
+}
+
+h2 {
+  margin: 3vh;
+  color: black;
+  font-family: Agbalumo;
+  text-shadow: -0.5px -0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, 0.5px 0.5px 0 white;
+}
+
+/* Flex made life easy */
+.box3 {
+  height: 290vh;
+  display: flex;
+  flex-wrap: wrap;
+  /* row-gap: 17vh; */
+  justify-content: space-around;
+  align-content: space-around;
+  border-radius: 2vh;
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+.album {
+  border-radius: 2vh;
+  width: 85vh;
+  height: 50vh;
+  background-color: rgb(255, 255, 255, 0.5);
+  border: 2px solid rgb(114, 118, 250);
+  box-shadow: 2px 2px 2px 2px #000;
+  display: flex;
+}
+
+.alim{
+  width: 33vh;
+  height: 35vh;
+  position: relative;
+  left: 5vh;
+
+}
+
+.alm{
+  position: relative;
+  left: 6vh;
+  top: 2vh;
+
+}
+
+.alm2{
+  position: relative;
+  width: 38vh;
+  left: 3vh;
+  font-family: "Baloo 2";
+  color: white;
+}
+
+.alm2::first-line{
+  font-weight: 600;
+  color: blue;
+}
+
+* {box-sizing: border-box;}
+      body {font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0;}
+      
+      /* Make the slideshow container cover the entire top portion */
+      .slideshow-container {
+          width: 100%; /* Full width of the viewport */
+          height: 80vh; /* Make it cover the full viewport height */
+          position: relative;
+          
+          margin: 0 auto;
+          overflow: hidden; /* Hide overflow */
+          top: -2%; /* Align to the top of the page */
+          left: -2%;
+         
+          z-index: -1; /* Ensure it stays behind other content */
+      }
+      
+      .mySlides {
+          display: none;
+          width: 100%;
+          height: 100%;
+      }
+      
+      img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* Ensure the image covers the entire container */
+          vertical-align: middle;
+      }
+      
+      .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+      }
+      
+      @-webkit-keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+      }
+      
+      @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+      }
+      .help {
+        width: 10vh;
+        height: 10vh;
+        
+        background-size: contain;
+        position: fixed;
+        right: 5vh;
+        bottom: 8vh;
+        z-index: 1;
+        border-radius: 10vh;
+        box-shadow: 2px 2px 2px 2px black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .contact-button {
+        background-color: var(--b); /* Adjust this color as needed */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        position: relative;
+        z-index: 2; /* Ensure button is on top */
+      }
+      
+      .contact-button:hover {
+        background-color: var(--r); /* Adjust this color as needed */
+      }
+      
+      .contact-us {
+        position: relative;
+        margin: 20px;
+      }
+      .contact-details {
+        display: none; /* Hidden by default */
+        position: absolute; /* Allows for positioning relative to the parent */
+       /* Position it directly below the button */
+    right: 100%; /* Position it to the left of the button */
+        margin-top: 10px;
+        padding: 10px;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 2; /* Ensures it appears above other content */
+    }
+    
+      
+      .contact-details p {
+        margin: 5px 0;
+      }
+      
+      .contact-details a {
+        color: var(--b); /* Adjust this color as needed */
+        text-decoration: none;
+      }
+      
+      .contact-details a:hover {
+        text-decoration: underline;
+      }
+      body {
+        font-family: Arial, sans-serif;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+  }
+ 
+  #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333; /* Adjust this as needed */
+    z-index: 1000; /* Keeps the navbar on top of other content */
+}
+
+#navbar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#navbar nav ul li {
+    display: inline;
+}
+
+#navbar nav ul li a {
+    color: white; /* Adjust text color */
+    text-decoration: none;
+    padding: 10px;
+}
+
+.logo {
+    height: 50px; /* Adjust height as needed */
+    vertical-align: middle;
+}
+
+/* Add some padding to the body to ensure content is not hidden behind the navbar */
+body {
+    padding-top: 70px; /* Adjust according to the navbar height */
+}

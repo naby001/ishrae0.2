@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISHRAE Jadavpur University Chapter Achievements</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .year-section {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .year-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .year-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .achievement {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: rgba(52, 152, 219, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .achievement:hover {
+            background-color: rgba(52, 152, 219, 0.2);
+        }
+
+        .achievement-title {
+            font-weight: 600;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .winners {
+            margin-left: 20px;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .winners li {
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .winners li::before {
+            content: '🏆';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        .trophy {
+            color: var(--accent-color);
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .year-section {
+                padding: 20px;
+            }
+
+            .year-title {
+                font-size: 1.5rem;
+            }
+
+            .achievement-title {
+                font-size: 1.1rem;
+            }
+        }
+        #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+ right: 0px;
+    background-color: #333; /* Adjust this as needed */
+    z-index: 1000; /* Keeps the navbar on top of other content */
+}
+
+#navbar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#navbar nav ul li {
+    display: inline;
+}
+
+#navbar nav ul li a {
+    color: white; /* Adjust text color */
+    text-decoration: none;
+    padding: 10px;
+}
+
+.logo {
+    height: 50px; /* Adjust height as needed */
+    vertical-align: middle;
+}
+
+/* Add some padding to the body to ensure content is not hidden behind the navbar */
+body {
+    padding-top: 70px; /* Adjust according to the navbar height */
+}
+
+    </style>
+</head>
+<body>
+    <header id="navbar">
+        <nav>
+            <ul>
+                <li>
+                    <img src="ishju-removebg-preview.png" alt="Logo" class="logo">
+                    ISHRAE JU
+                </li>
+                <li><a href="navbar.html" class="r">Home</a></li>
+                <li><a href="navbar.html#about" class="b">About</a></li>
+                <li><a href="events.html" class="g">Events</a></li>
+                <li><a href="member.html" class="y">Membership</a></li>
+                <li><a href="competiton.html" class="y">Competition</a></li>
+                <li><a href="achievements.html" class="y">Achievement</a></li>
+                <li><a href="ourteam.html" class="y">Our team</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+
+    <h1>ISHRAE Jadavpur University Chapter Achievements</h1>
+    <div id="achievements-container"></div>
+
+    <script>
+        const achievements = [
+            {
+                year: "2023-24",
+                accomplishments: [
+                    {
+                        title: "Best Students Chapter (IKC)",
+                        details: "Jadavpur University"
+                    },
+                    {
+                        title: "SRPG Winners 🏆",
+                        winners: ["Arghadeep Mukherjee", "Hritam Sarkar", "Mainak Day", "Rishav Nandi"]
+                    },
+                    {
+                        title: "NSDC Winners 🏆",
+                        winners: ["Arghadeep Mukherjee", "Sayak Da", "Debjit Das"]
+                    },
+                    {
+                        title: "SRPG Winners 🏆",
+                        winners: ["Soumyadeep Khamrai", "Nishant Dey", "Ayush Barua", "Sandipan Das"]
+                    },
+                    {
+                        title: "AQUEST Winners 🏆",
+                        winners: ["Soumyadeep Khamrai", "Swarnendu Chakraborty"]
+                    }
+                ]
+            },
+            {
+                year: "2022-23",
+                accomplishments: [
+                    {
+                        title: "Best Students Chapter (IKC)",
+                        details: "Jadavpur University"
+                    },
+                    {
+                        title: "Best Faculty Advisor (IKC)",
+                        details: "Prof. Sourav Sarkar"
+                    },
+                    {
+                        title: "National Winner, Aquest",
+                        winners: ["Hrishiraj Mallick", "Soumyadeep Khamrai"]
+                    },
+                    {
+                        title: "1st Runners up, HVAC Hackathon",
+                        winners: ["Niloy Sen", "Priyanshu Mondal", "Reeshav Barik", "Raju Barman"]
+                    }
+                ]
+            },
+            {
+                year: "2021-22",
+                accomplishments: [
+                    {
+                        title: "1st Runners up, Best Students Chapter (IKC)",
+                        details: "Jadavpur University"
+                    },
+                    {
+                        title: "National Winner, ISHRAE SRPG",
+                        winners: ["Pritam Mitra", "Bishal Roy", "Shelly Dey"]
+                    },
+                    {
+                        title: "National Winner, ISHRAE NSDC",
+                        winners: ["Fahmid Zaman", "Soumyadip Dhara", "Soumyadip Bhattacherjee", "Sayak Ray"]
+                    },
+                    {
+                        title: "1st Runners up, HVAC Hackathon",
+                        winners: ["Anwesha Das", "Sagnik Sarkar", "Niloy Sen", "Shirsha Nandy"]
+                    }
+                ]
+            }
+        ];
+
+        function createAchievementHTML(achievement) {
+            let html = `<div class="achievement">
+                <span class="achievement-title">${achievement.title}</span>`;
+            
+            if (achievement.details) {
+                html += `<p>${achievement.details}</p>`;
+            }
+            
+            if (achievement.winners) {
+                html += `<ul class="winners">
+                    ${achievement.winners.map(winner => `<li>${winner}</li>`).join('')}
+                </ul>`;
+            }
+            
+            html += `</div>`;
+            return html;
+        }
+
+        function renderAchievements() {
+            const container = document.getElementById('achievements-container');
+            achievements.forEach(yearData => {
+                const yearSection = document.createElement('div');
+                yearSection.className = 'year-section';
+                yearSection.innerHTML = `
+                    <h2 class="year-title">Year ${yearData.year}</h2>
+                    ${yearData.accomplishments.map(createAchievementHTML).join('')}
+                `;
+                container.appendChild(yearSection);
+            });
+        }
+
+        window.addEventListener('load', renderAchievements);
+    </script>
+</body>
+</html>
