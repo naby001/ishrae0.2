@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISHARE</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+}
+.logo{
+  top: 0%;
+  left: 1%;
+  width: 50px;
+  box-shadow: none; /* Remove any default shadow */
+    border: none; /* Remove any default border */
+    margin: 0; /* Ensure there's no extra space around the logo */
+    padding: 10; 
+}
+
+body {
+  background-image: url('./ev/down.jpg');
+  background-size: contain;
+}
+
+:root {
+  --r: rgb(230, 18, 18);
+  --g: rgb(21, 186, 21);
+  --b: rgb(17, 86, 206);
+  --y: #FFC200;
+  --fb: 'Baloo 2', sans-serif;
+
+}
+
+header {
+  background-color: aliceblue;
+  position: sticky;
+  top: 0;
+  padding: 1vh;
+  font-family: var(--fb);
+  font-weight: 600;
+  z-index: 1;
+}
+
+
+
+
+
+
+a {
+  color: rgb(27, 9, 185);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+footer {
+  background-color: aliceblue;
+  position: relative;
+  bottom: -20vh;
+}
+
+.container {
+  height: 60vh;
+  width: 80%;
+  backdrop-filter: blur(2px);
+
+  background-size: cover;
+  background-color: rgb(255, 255, 255, 0.5);
+  padding: 10vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  padding-top: 5vh;
+  border-radius: 5vh;
+  border: 1vh solid white;
+  font-family: Agbalumo;
+  position: relative;
+  left: 10vh;
+  word-spacing: 1vh;
+  color: #000000;
+
+}
+
+h3 {
+  color: white;
+  background-color: rgb(1, 5, 253);
+  width: 73vw;
+  border-radius: 1vh;
+  font-family: var(--fb);
+}
+
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(255, 255, 255);
+  text-shadow: -0.4px -0.4px 0 #000, 0.4px -0.4px 0 #000, -0.4px 0.4px 0 #000, 0.4px 0.4px 0 #000;
+
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+hr {
+  width: 70vw;
+  border-width: 0;
+  border-radius: 1vh;
+  background-color: white;
+  height: 0.5vh;
+}
+
+.box2 {
+  height: 300vh;
+  margin-bottom: 5vh;
+
+  background-image: url(https://t4.ftcdn.net/jpg/02/98/68/73/360_F_298687332_D0GAA6fAgr70NWtF8UKXPyLx0mTGug0x.jpg);
+  background-size: cover;
+}
+
+
+label {
+  font-family: Agbalumo;
+  padding-top: 5vh;
+  color: rgb(46, 66, 248);
+  font-size: 10vh;
+  text-shadow: -0.5px -0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, 0.5px 0.5px 0 white;
+}
+
+
+
+h2 {
+  margin: 3vh;
+  color: black;
+  font-family: Agbalumo;
+  text-shadow: -0.5px -0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, 0.5px 0.5px 0 white;
+}
+
+/* Flex made life easy */
+.box3 {
+  height: 290vh;
+  display: flex;
+  flex-wrap: wrap;
+  /* row-gap: 17vh; */
+  justify-content: space-around;
+  align-content: space-around;
+  border-radius: 2vh;
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+.album {
+  border-radius: 2vh;
+  width: 85vh;
+  height: 50vh;
+  background-color: rgb(255, 255, 255, 0.5);
+  border: 2px solid rgb(114, 118, 250);
+  box-shadow: 2px 2px 2px 2px #000;
+  display: flex;
+}
+
+.alim{
+  width: 33vh;
+  height: 35vh;
+  position: relative;
+  left: 5vh;
+
+}
+
+.alm{
+  position: relative;
+  left: 6vh;
+  top: 2vh;
+
+}
+
+.alm2{
+  position: relative;
+  width: 38vh;
+  left: 3vh;
+  font-family: "Baloo 2";
+  color: white;
+}
+
+.alm2::first-line{
+  font-weight: 600;
+  color: blue;
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+  }
+  .dj{
+    width:3rem;
+  }
+
+
+
+/* Add some padding to the body to ensure content is not hidden behind the navbar */
+body {
+    padding-top: 70px; /* Adjust according to the navbar height */
+}
+</style>
+<body >
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <header id="navbar" class="fixed top-0 w-full bg-gray-800 z-50">
+        <nav>
+            <ul class="flex justify-around p-4">
+                <li class="flex items-center">
+                    <img src="ishju-removebg-preview.png" alt="Logo" class="dj">
+                    <span class="text-white ml-2">ISHRAE JU</span>
+                </li>
+                <li><a href="navbar.html" class="text-white font-semibold hover:underline">Home</a></li>
+                <li><a href="navbar.html#about" class="text-blue-600 font-semibold hover:underline">About</a></li>
+                <li><a href="events.html" class="text-green-600 font-semibold hover:underline">Events</a></li>
+                <li><a href="member.html" class="text-yellow-500 font-semibold hover:underline">Membership</a></li>
+                <li><a href="competition.html" class="text-yellow-500 font-semibold hover:underline">Competition</a></li>
+                <li><a href="achievements.html" class="text-yellow-500 font-semibold hover:underline">Achievement</a></li>
+                <li><a href="ourteam.html" class="text-yellow-500 font-semibold hover:underline">Our team</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+
+  
+     <!-- Album  -->
+  <div id="Competiton" class="box2 box3" style="margin-bottom: 0; ">
+
+    <center>
+        <label>Competiton</label>
+    </center>
+
+    <div class="box2 box3" style="margin-bottom: 0;">
+
+        <div class="album">
+
+            <img  src="./comp/aquest.png" alt="2 cool 4 skool" class="alim">
+            <div class="alm">
+
+                <h2>
+                    aQuest	
+
+                </h2>
+
+                <div class="alm2">
+                    Released: June 12, 2013. <br> This is a national level Quiz competition, related to HVAC&R.  This competition is held is several rounds. The first stage is in December, in regional level. 
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="album">
+
+            <img src="./comp/srpg.jpg"
+                alt="O!RUL8,2?" class="alim">
+            <div class="alm">
+
+                <h2>
+                    Student Research Project Grant (SRPG)
+                </h2>
+
+                <div class="alm2">
+                    Released: September 11, 2013. <br> This competition is more of a research project.  A few core ideas are given, and students are asked to develop products out of it.  SRPG provides students with funding, mentorship, and resources to help them conduct research on topics related to HVAC&R.
+                    
+                </div>
+
+            </div>
+        </div>
+
+        <div class="album">
+
+            <img src="./comp/nsdc.png" alt="Skool Luv Affair"
+                class="alim">
+            <div class="alm">
+
+                <h2>
+                    National Students Design Competition
+
+                </h2>
+
+                <div class="alm2">
+                    Released: February 12, 2014. <br>This competition asks students to develop HVAC system of some corporate buildings, sometimes it is shopping mall, sometimes office etc.  It provides students with the opportunity to learn and work on a practical project and develop new skills. 
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="album">
+
+            <img src="./comp/hack.jpg" alt="Dark&wild"
+                class="alim">
+            <div class="alm">
+
+                <h2>
+                    Hackathon
+
+                </h2>
+
+                <div class="alm2" style="font-size: 2.5vh;">
+                    Released: August 19, 2014. <br>Students look to brainstorm ideas and develop innovative solutions on pre-decided problem sets. The problem changes every year. Last year it was based on use of solar energy in refrigeration. 
+                    .
+                </div>
+
+            </div>
+        </div>
+
+        <div class="album">
+
+            <img src="./comp/entropy.jpeg"
+                alt="The most beautiful Moment Part-I" class="alim">
+            <div class="alm">
+
+                <h2>
+                   ENTROPY
+
+                </h2>
+
+                <div class="alm2" style="font-size: 2.5vh;">
+                    Release Date: April 29, 2015 <br> It
+                    initiated a narrative series for BTS and explored the complexities of youth. The album included tracks like "I Need U" and "Dope."
+                </div>
+
+            </div>
+        </div>
+
+        <div class="album">
+
+            <img src="./comp/refcold.png"
+                alt="The most beautiful Moment Part-II" class="alim">
+            <div class="alm">
+
+                <h2>
+                    REFCOLD-HACKATHON
+
+
+                </h2>
+
+                <div class="alm2">
+                    Released:  November 30, 2015 <br>
+                    ISHRAE's first event in this calendar year, The Refcold-23 Hackathon is a student-led event that aims to promote innovation in the field of HVAC&R to solve agricultural problems.  
+                     Winners get incubation benefits of Rs 1,00,000. 
+                     held in June-july (tentative)
+                </div>
+
+            </div>
+        </div>
+
+        <div class="album">
+
+            <img src="./comp/solar.png"
+                alt="The most beautiful Moment:Yo Forver" class="alim">
+            <div class="alm">
+
+                <h2 style="font-size: 4vh;">
+                    Solar Decathlon
+                </h2>
+
+                <div class="alm2" style="font-size: 2.5vh;">
+                    Released:  May 2, 2016. <br> Solar Decathlon India is an annual, 9-month long challenge for undergraduate and postgraduate students from India to combat Climate Change by innovating and designing net-zero energy and climate resilient building solutions. 
+               </div>
+
+            </div>
+        </div>
+
+        <div class="album">
+
+            <img src="https://ibighit.com/bts/images/bts/discography/wings/album-cover.jpg" alt="Wings" class="alim">
+            <div class="alm">
+
+                <h2>
+                    RACON
+                </h2>
+
+                <div class="alm2">
+                    Released:  October 10, 2016. <br>This competition  encourages students to become involved in a profession that is crucial for ensuring a sustainable future for our Earth.  By participating in this Competition Students will get an opportunity to extend their knowledge beyond their Engineering Course Curriculum by actually designing a System. 
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+<br><br><br><br>
+    
+</body></html>
