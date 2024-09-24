@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISHRAE Student Membership</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --card-bg: #fff;
+            --highlight-bg: #ffffcc;
+            --link-color: #0066cc;
+        }
+
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f4f4f4;
+            --card-bg: #2c2c2c;
+            --highlight-bg: #4d4d00;
+            --link-color: #66b3ff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+          
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            color: var(--text-color);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .dark-mode-toggle {
+            display: flex;
+            align-items: center;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: var(--card-bg);
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            color: var(--text-color);
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        .note {
+            background-color: var(--highlight-bg);
+            padding: 10px;
+            border-left: 5px solid #ffeb3b;
+            margin-top: 20px;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <header id="navbar" class="fixed top-0 w-full bg-gray-800 z-50">
+        <nav>
+            <ul class="flex justify-around p-4">
+                <li class="flex items-center">
+                    <img src="ishju-removebg-preview.png" alt="Logo" class="w-12">
+                    <span class="text-white ml-2">ISHRAE JU</span>
+                </li>
+                <li><a href="../index.html" class="text-white font-semibold hover:underline">Home</a></li>
+                <li><a href="../index.html#about" class="text-blue-600 font-semibold hover:underline">About</a></li>
+                <li><a href="events.html" class="text-green-600 font-semibold hover:underline">Events</a></li>
+                <li><a href="member.html" class="text-yellow-500 font-semibold hover:underline">Membership</a></li>
+                <li><a href="competition.html" class="text-yellow-500 font-semibold hover:underline">Competition</a></li>
+                <li><a href="achievements.html" class="text-yellow-500 font-semibold hover:underline">Achievement</a></li>
+                <li><a href="ourteam.html" class="text-yellow-500 font-semibold hover:underline">Our team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" style="margin-top: 100px;">
+        <div class="header">
+            <h1>ISHRAE Student Membership</h1>
+            <div class="dark-mode-toggle">
+                <span>🌞</span>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+                <span>🌙</span>
+            </div>
+        </div>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'NewMembers')" id="defaultOpen">New Members</button>
+            <button class="tablinks" onclick="openTab(event, 'ExistingMembers')">Existing Members</button>
+        </div>
+
+        <div id="NewMembers" class="tabcontent">
+            <h2>Steps for New Members:</h2>
+            <ol class="list-decimal pl-6">
+                <li>Go to <a href="https://www.ishraehq.in/" target="_blank">https://www.ishraehq.in/</a>. Scroll down and click on "Student Member" tab.</li>
+                <li>3 types of student membership plans (1yr, 2yr, 3yr) will appear. Select the plan of your choice by clicking "Join Now" below the respective membership plan.</li>
+                <li>Accept the "TERMS AND CONDITIONS" by clicking the check box. Then select "Join Now".</li>
+                <li>"Registration details" page will appear. Fill in the required information i.e. Institute information, personal details, your current academic details and a scanned PDF of your College Id Card.</li>
+                <li>After filling up the "Registration details" click on Continue.</li>
+                <li>"Information Confirmation" page will appear. Choose a password for your ISHRAE account. After completing, click on "Save and continue".</li>
+                <li>"Plan confirmation" page will appear. Select "Pay Now" tab under the membership plan of your choice (i.e. 1yr, 2yr, 3yr). You will be redirected to a payment gateway. Fill in the necessary payment details and complete the payment.</li>
+                <li>After completing the payment, you will receive 2 emails from ISHRAE on your registered email id.</li>
+            </ol>
+            <div class="note">
+                <p><strong>Note:</strong> Whatsapp your Name, Year of Study, Year of passing out, and screenshot of the confirmation mail to Pritam Mitra (+91 9339163372).</p>
+                <p>Also fillup the form <a href="https://forms.gle/QJrJ3zbB1CA68kHG8" target="_blank">https://forms.gle/QJrJ3zbB1CA68kHG8</a>.</p>
+                <p><strong>Congratulations! You are now a student member of ISHRAE</strong></p>
+            </div>
+        </div>
+
+        <div id="ExistingMembers" class="tabcontent">
+            <h2>Steps for Existing Members to Renew Membership for 2023-2024:</h2>
+            <ol>
+                <li>Visit the website of ISHRAE: <a href="https://ishrae.in/" target="_blank">https://ishrae.in/</a></li>
+                <li>Go to Student Zone and log in using your membership ID and password.</li>
+                <li>A pop up message will appear that will show to renew your membership.</li>
+                <li>Click on the renew membership option.</li>
+                <li>A form will be shown with all the relevant details pre-filled in it.</li>
+                <li>Just change the year of study and also make any changes in your phone number or email if required.</li>
+                <li>Click on Continue, confirm the payment details and make the payment.</li>
+                <li>Membership renewal is done for the year 2023-2024.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Dark Mode Toggle
+        document.getElementById('darkModeToggle').addEventListener('change', function () {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Tabbed Content Script
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Default tab open
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>
