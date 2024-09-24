@@ -6,6 +6,123 @@
     <title>ISHRAE Student Membership</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
+        le>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./ev/down.jpg');
+            background-size: cover;
+            padding-top: 70px; /* Space for fixed navbar */
+            line-height: 1.5;
+        }
+
+        /* Root Variables */
+        :root {
+            --r: rgb(230, 18, 18);
+            --g: rgb(21, 186, 21);
+            --b: rgb(17, 86, 206);
+            --y: #FFC200;
+            --fb: 'Baloo 2', sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1f2937;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo Container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-container span {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+            font-family: var(--fb);
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--b);
+            text-decoration: underline;
+        }
+
+        /* Hamburger Menu Styles */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: #1f2937;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                padding: 1rem 0;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+        }
+
         :root {
             --bg-color: #f4f4f4;
             --text-color: #333;
@@ -14,6 +131,7 @@
             --link-color: #0066cc;
         }
 
+        
         .dark-mode {
             --bg-color: #1a1a1a;
             --text-color: #f4f4f4;
@@ -158,24 +276,24 @@
 <body>
 
     <!-- Navbar Section -->
-    <header id="navbar" class="fixed top-0 w-full bg-gray-800 z-50">
+    <header>
+        <div class="logo-container">
+            <img src="ishju-removebg-preview.png" alt="Logo">
+            <span>ISHRAE JU</span>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
         <nav>
-            <ul class="flex justify-around p-4">
-                <li class="flex items-center">
-                    <img src="ishju-removebg-preview.png" alt="Logo" class="w-12">
-                    <span class="text-white ml-2">ISHRAE JU</span>
-                </li>
-                <li><a href="../index.html" class="text-white font-semibold hover:underline">Home</a></li>
-                <li><a href="../index.html#about" class="text-blue-600 font-semibold hover:underline">About</a></li>
-                <li><a href="events.html" class="text-green-600 font-semibold hover:underline">Events</a></li>
-                <li><a href="member.html" class="text-yellow-500 font-semibold hover:underline">Membership</a></li>
-                <li><a href="competition.html" class="text-yellow-500 font-semibold hover:underline">Competition</a></li>
-                <li><a href="achievements.html" class="text-yellow-500 font-semibold hover:underline">Achievement</a></li>
-                <li><a href="ourteam.html" class="text-yellow-500 font-semibold hover:underline">Our team</a></li>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="member.html">Membership</a></li>
+                <li><a href="competition.html">Competition</a></li>
+                <li><a href="achievements.html">Achievement</a></li>
+                <li><a href="ourteam.html">Our Team</a></li>
             </ul>
         </nav>
     </header>
-
     <div class="container" style="margin-top: 100px;">
         <div class="header">
             <h1>ISHRAE Student Membership</h1>
@@ -251,6 +369,13 @@
 
         // Default tab open
         document.getElementById("defaultOpen").click();
+        
+const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('nav ul');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
     </script>
 </body>
 </html>

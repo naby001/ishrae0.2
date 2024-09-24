@@ -13,24 +13,24 @@
 </head>
 <body>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <header id="navbar" class="fixed top-0 w-full bg-gray-800 z-50">
-    <nav>
-        <ul class="flex justify-around items-center p-4">
-            <li class="flex items-center space-x-2">
-                <img src="./navbar/ishju-removebg-preview.png" alt="ISHRAE JU Logo" class="w-16 h-auto object-contain"> <!-- Adjusted size -->
-                <span class="text-white text-lg font-bold">ISHRAE JU</span>
-            </li>
-            <li><a href="index.html" class="text-white font-semibold hover:underline">Home</a></li>
-            <li><a href="index.html#about" class="text-blue-600 font-semibold hover:underline">About</a></li>
-            <li><a href="./navbar/events.html" class="text-green-600 font-semibold hover:underline">Events</a></li>
-            <li><a href="./navbar/member.html" class="text-yellow-500 font-semibold hover:underline">Membership</a></li>
-            <li><a href="./navbar/competition.html" class="text-yellow-500 font-semibold hover:underline">Competition</a></li>
-            <li><a href="./navbar/achievements.html" class="text-yellow-500 font-semibold hover:underline">Achievement</a></li>
-            <li><a href="./navbar/ourteam.html" class="text-yellow-500 font-semibold hover:underline">Our team</a></li>
-        </ul>
-    </nav>
-</header>
-
+    <header>
+        <div class="logo-container">
+            <img src="ishju-removebg-preview.png" alt="Logo">
+            <span>ISHRAE JU</span>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#about">About</a></li>
+                <li><a href="./navbar/events.html">Events</a></li>
+                <li><a href="./navbar/member.html">Membership</a></li>
+                <li><a href="./navbar/competition.html">Competition</a></li>
+                <li><a href="./navbar/achievements.html">Achievement</a></li>
+                <li><a href="./navbar/ourteam.html">Our Team</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="slideshow-container">
         <div class="mySlides fade">
