@@ -2,7 +2,7 @@ body {
   background-image: url('./ev/down.jpg');
   background-size: contain;
 }
-le>
+
         /* Reset and Base Styles */
         * {
             margin: 0;
@@ -136,25 +136,48 @@ footer {
 }
 
 .container {
-  height: 60vh;
+  height:95%;
   width: 80%;
   backdrop-filter: blur(2px);
-
   background-size: cover;
-  background-color: rgb(255, 255, 255, 0.5);
-  padding: 10vh;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-  padding-top: 5vh;
+  background-color: rgba(255, 255, 255, 0.5); /* Use 'rgba' for transparency */
+  padding: 10vh 5vh; /* Adjust padding for top-bottom and left-right */
+  margin: 10vh auto; /* Center the container horizontally */
   border-radius: 5vh;
   border: 1vh solid white;
-  font-family: Agbalumo;
+  font-family: Agbalumo, sans-serif; /* Fallback font added */
   position: relative;
-  left: 10vh;
   word-spacing: 1vh;
   color: #000000;
-
 }
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+    padding: 8vh 4vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    height: 95%;
+    padding: 6vh 3vh;
+    border-radius: 3vh;
+    word-spacing: 0.8vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 5vh 2vh;
+    word-spacing: 0.5vh;
+    border-radius: 2vh;
+  }
+}
+
 h1 {
   font-family: 'Times New Roman', Times, serif;
   color: rgb(255, 255, 255);
@@ -190,7 +213,13 @@ body {font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #
   width: 100%;
   height: 100%;
 }
-
+@media (max-width: 768px) {
+  .mySlides img {
+  
+    left: 50px;
+    height: 100%; /* Maintain aspect ratio on smaller devices */
+  }
+}
 * {box-sizing: border-box;}
       body {font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0;}
       
@@ -207,13 +236,7 @@ body {font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #
          
           z-index: -1; /* Ensure it stays behind other content */
       }
-      
-      .mySlides {
-          display: none;
-          width: 100%;
-          height: 100%;
-      }
-      
+    
       img {
           width: 100%;
           height: 100%;
@@ -254,7 +277,7 @@ body {font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #
       }
       
       .contact-button {
-        background-color: rgb(32, 74, 179); /* Adjust this color as needed */
+        background-color: rgb(21, 69, 190); /* Adjust this color as needed */
         color: white;
         border: none;
         padding: 10px 20px;
@@ -313,4 +336,128 @@ body {font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #
  /* Add some padding to the body to ensure content is not hidden behind the navbar */
 body {
     padding-top: 70px; /* Adjust according to the navbar height */
+}
+/* General Section Styling */
+.ishrae-section {
+  margin-bottom: 3rem;
+}
+
+/* Heading Styling */
+.ishrae-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #0074b8; /* Replace with your ISHRAE blue color */
+}
+
+/* Blue Line Styling */
+.line-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.blue-line {
+  width: 64px; /* Fixed width */
+  height: 4px; /* Fixed height */
+  background-color: #0074b8; /* Replace with your ISHRAE blue color */
+}
+
+/* Grid Container Styling */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem; /* Spacing between the grid items */
+}
+
+@media (min-width: 640px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+  }
+}
+
+/* Card Styling */
+.card {
+
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #0074b8; /* ISHRAE blue */
+}
+
+/* Card Text */
+.card-text {
+  color: #4a5568; /* Text gray color */
+}
+
+/* General Section Styling */
+.section {
+  margin-bottom: 3rem;
+}
+
+/* Section Title (Heading) Styling */
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #000; /* Heading color (black) */
+}
+
+/* Section Text (Paragraph) Styling */
+.section-text {
+  color: #4a5568; /* Tailwind's text-gray-700 */
+  font-size: 1rem;
+  line-height: 1.75; /* Spacing between lines */
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .section-text {
+    font-size: 0.85rem;
+  }
 }
