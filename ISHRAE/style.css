@@ -107,6 +107,9 @@ body {
                 display: none;
                 padding: 1rem 0;
             }
+              .slideshow-container{
+                display: none;
+              }
 
             nav ul.show {
                 display: flex;
