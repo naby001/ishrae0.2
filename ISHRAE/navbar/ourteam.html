@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faculty and Staff</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,52 +21,68 @@
             padding: 0;
             background-color: #ffffff;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
+
         h1 {
             text-align: center;
             color: #333;
+            padding: 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 20px;
         }
+
         .card {
             background-color: white;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: "Baloo 2", sans-serif;
         }
+
         .card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
+
         .card-content {
             padding: 15px;
         }
+
         .card-content h2 {
             margin: 0;
             font-size: 16px;
             color: #333;
         }
+
         .card-content p {
             margin: 5px 0 0;
             font-size: 14px;
             color: #666;
         }
- /* Add some padding to the body to ensure content is not hidden behind the navbar */
- body {
-  padding-top: 70px; /* Adjust according to the navbar height */
-}
+
+        /* Add some padding to the body to ensure content is not hidden behind the navbar */
+        body {
+            padding-top: 70px;
+            /* Adjust according to the navbar height */
+        }
 
 
 
-le>
+        le>
+
         /* Reset and Base Styles */
         * {
             margin: 0;
@@ -69,7 +94,8 @@ le>
             font-family: Arial, sans-serif;
             background-image: url('./ev/down.jpg');
             background-size: cover;
-            padding-top: 70px; /* Space for fixed navbar */
+            padding-top: 70px;
+            /* Space for fixed navbar */
             line-height: 1.5;
         }
 
@@ -173,12 +199,12 @@ le>
                 display: block;
             }
         }
-
-
-        
     </style>
-  
+
+
+
 </head>
+
 <body>
 
 
@@ -187,7 +213,9 @@ le>
     <header>
         <div class="logo-container">
             <img src="ishju-removebg-preview.png" alt="Logo">
-            <span>ISHRAE JU</span>
+            <a href="https://ishrae0-2-gqqc.vercel.app/">
+                <span>ISHRAE JU</span>
+            </a>
         </div>
         <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
         <nav>
@@ -197,32 +225,90 @@ le>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="member.html">Membership</a></li>
                 <li><a href="competition.html">Competition</a></li>
-                <li><a href="achievements.html">Achievement</a></li>
+                <li><a href="achiveAsm.html">Achievement</a></li>
                 <li><a href="ourteam.html">Our Team</a></li>
             </ul>
         </nav>
     </header>
-        
-    
+
+
     <div class="container">
-        <h1>Faculty and Staff</h1>
+        <h1>Faculty Advisor </h1>
         <div id="staff-grid" class="grid">
-            <!-- Staff members will be dynamically inserted here -->
+            <div class="card">
+                <img src="../ev/sov.jpg" alt="Dr Sourav Sarkar">
+                <div class="card-content">
+                    <h2>Dr Sourav Sarkar</h2>
+                    <p>Faculty Advisor</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../ev/acm.jpg" alt="Prof Achintya Mukhopadhyay">
+
+                <div class="card-content">
+                    <h2>Prof Achintya Mukhopadhyay</h2>
+                    <p>Faculty Advisor</p>
+                </div>
+            </div>
+
+            <!-- Trying to add web dev with faculty -->
+
+            <!-- <div class="card">
+                <img src="../ev/nabu.jpg" alt="Nabyendu Das">
+                <div class="card-content">
+                    <h2>Nabyendu Das</h2>
+                    
+                </div>
+            </div> -->
+            <!-- <div class="card">
+            <img src="../ev/asm.PNG" alt="Prof Achintya Mukhopadhyay">
+    
+            <div class="card-content">
+                <h2>Asmita Bagchi</h2>
+            </div>
+        </div> -->
+        </div>
+
+        <h1>Student Members</h1>
+        <div id="student-grid" class="grid">
+            <!-- Student members will be dynamically inserted here -->
+        </div>
+
+        <h1>Web Developers</h1>
+        <div id="staff-grid" class="grid">
+            <div class="card">
+                <img src="../ev/nabu.jpg" alt="Nabyendu Das">
+                <div class="card-content">
+                    <h2>Nabyendu Das</h2>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="../ev/asm.PNG" alt="Prof Achintya Mukhopadhyay">
+
+                <div class="card-content">
+                    <h2>Asmita Bagchi</h2>
+
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
-        const staffMembers = [
-            {
-                name: "Dr Sourav Sarkar",
-                role: "Faculty Advisor",
-                imageUrl: "../ev/sov.jpg"
-            },
-            {
-                name: "Prof Achintya Mukhopadhyay",
-                role: "Faculty Advisor",
-                imageUrl: "../ev/acm.jpg"
-            },
+
+        function createStaffCard(member) {
+            return `
+                <div class="card">
+                    <img src="${member.imageUrl}" alt="${member.name}">
+                    <div class="card-content">
+                        <h2>${member.name}</h2>
+                        <p>${member.role}</p>
+                    </div>
+                </div>
+            `;
+        }
+        const studentMembers = [
             {
                 name: "Mrinmoy Tarafder",
                 role: "President",
@@ -269,50 +355,37 @@ le>
                 imageUrl: "../ev/nisant.jpg"
             },
             {
-                name: "Lisa Chen",
+                name: "Ritesh Kumar Mondal",
                 role: "SOCIAL In-Charge",
                 imageUrl: "../ev/rit.jpg"
             },
             {
-                name: "Lisa Chen",
+                name: "Rachello Paul Chakraborty",
                 role: "SOCIAL In-Charge",
                 imageUrl: "../ev/rachel.jpg"
             },
             {
-                name: "Lisa Chen",
-                role: "STRATEGIC COORDINATOR",
+                name: "Himopravo Chowdhury",
+                role: "Strategic Coordinator",
                 imageUrl: "../ev/himo.jpg"
             },
 
-           
+
             {
-                name: "Lisa Chen",
+                name: "Amrita Dasgupta",
                 role: "Public Reach Incharge",
                 imageUrl: "../ev/amrita.jpg"
             },
             {
-                name: "Lisa Chen",
+                name: "Srija Mondal",
                 role: "Public Reach Incharge",
                 imageUrl: "../ev/srija.jpg"
             }
-
-        ];
-
-        function createStaffCard(member) {
-            return `
-                <div class="card">
-                    <img src="${member.imageUrl}" alt="${member.name}">
-                    <div class="card-content">
-                        <h2>${member.name}</h2>
-                        <p>${member.role}</p>
-                    </div>
-                </div>
-            `;
-        }
+        ]
 
         function renderStaffGrid() {
-            const gridElement = document.getElementById('staff-grid');
-            gridElement.innerHTML = staffMembers.map(createStaffCard).join('');
+            const gridElement = document.getElementById('student-grid');
+            gridElement.innerHTML = studentMembers.map(createStaffCard).join('');
         }
 
         // Render the staff grid when the page loads
@@ -325,4 +398,5 @@ le>
         });
     </script>
 </body>
+
 </html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISHRAE Jadavpur University Chapter Achievements</title>
+
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            background: #4a90e2;
+            color: #fff;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Timeline Section */
+        .timeline {
+            padding: 40px 20px;
+            background-color: #f7f9fc;
+            text-align: center;
+        }
+
+        .timeline h2 {
+            font-size: 1.8em;
+            color: #e24a4a;
+            margin-bottom: 30px;
+        }
+
+        .timeline-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .achievement-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 200px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .achievement-card .icon {
+            font-size: 2.5em;
+        }
+
+        .achievement-card h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #4ae284;
+        }
+
+        .achievement-card p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .achievement-card .date {
+            font-size: 0.8em;
+            color: #aaa;
+        }
+
+        /* Achievements with Progress Bars */
+        .achievements {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .achievements h2 {
+            font-size: 1.8em;
+            color: #4a90e2;
+            margin-bottom: 30px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        le>
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./ev/down.jpg');
+            background-size: cover;
+            padding-top: 70px;
+            /* Space for fixed navbar */
+            line-height: 1.5;
+        }
+
+        /* Root Variables */
+        :root {
+            --r: rgb(230, 18, 18);
+            --g: rgb(21, 186, 21);
+            --b: rgb(17, 86, 206);
+            --y: #FFC200;
+            --fb: 'Baloo 2', sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1f2937;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo Container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-container span {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+            font-family: var(--fb);
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--b);
+            text-decoration: underline;
+        }
+
+        /* Hamburger Menu Styles */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: #1f2937;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                padding: 1rem 0;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <header>
+        <div class="logo-container">
+            <img src="ishju-removebg-preview.png" alt="Logo">
+            <a href="https://ishrae0-2-gqqc.vercel.app/">
+                <span>ISHRAE JU</span>
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="member.html">Membership</a></li>
+                <li><a href="competition.html">Competition</a></li>
+                <li><a href="achievements.html">Achievement</a></li>
+                <li><a href="ourteam.html">Our Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>ISHRAE Jadavpur University Chapter Achievements</h1>
+        <p>Milestones that define our journey and commitment to excellence.</p>
+    </section>
+
+    <!-- Horizontal Timeline Section -->
+    <section class="timeline">
+        <h2>Year 2023-24</h2>
+        <div class="timeline-container">
+            <div class="achievement-card">
+                <div class="icon">🌟</div>
+                <h3>Best Students Chapter (IKC)</h3>
+                <p>Jadavpur University</p>
+            </div>
+            <div class="achievement-card">
+                <div class="icon">🏆</div>
+                <h3>SRPG Winners</h3>
+                <p>Arghadeep Mukherjee</p>
+                <p>Hritam Sarkar</p>
+                <p>Mainak Day</p>
+                <p>Rishav Nandi</p>
+                <span class="date">2023</span>
+            </div>
+            <div class="achievement-card">
+                <div class="icon">🌟</div>
+                <h3>NSDC Winners</h3>
+                <p>Arghadeep Mukherjee</p>
+                <p>Sayak Das</p>
+                <p>Debjit Das</p>
+                <span class="date">2023</span>
+            </div>
+            <div class="achievement-card">
+                <div class="icon">🌟</div>
+                <h3>SRPG Winners</h3>
+                <p>Soumyadeep Khamrai</p>
+                <p>Ayush Barua</p>
+                <p>Sandipan Das</p>
+                <span class="date">2023</span>
+            </div>
+        </div>
+
+        <h2></h2>
+        <div class="timeline-container">
+            <div class="achievement-card">
+                <div class="icon">🌟</div>
+                <h3>AQUEST Winners</h3>
+                <p>Soumyadeep Khamrai</p>
+                <p>Swarnendu Chakraborty</p>
+                <span class="date">2023</span>
+            </div>
+        </div>
+
+        <h2>2022-23</h2>
+        <div class="timeline-container">
+            <div class="achievement-card">
+                <div class="icon">🌟</div>
+                <h3>Best Students Chapter (IKC)</h3>
+                <p>Jadavpur University</p>
+                <span class="date">2022</span>
+            </div>
+            <div class="achievement-card">
+                <div class="icon">🌟</div>
+                <h3>Best Faculty Advisor (IKC)</h3>
+                <p>Prof. Sourav Sarkar</p>
+                <span class="date">2022</span>
+            </div>
+            <div class="achievement-card">
+                <div class="icon">🌟</div>
+                <h3>National Winner, Aquest</h3>
+                <p>Hrishiraj Mallick</p>
+                <p>Soumyadeep Khamrai</p>
+                <span class="date">2022</span>
+            </div>
+            <div class="achievement-card">
+                <div class="icon">🌟</div>
+                <h3>1st Runners up, HVAC Hackathon</h3>
+                <p>Niloy Sen</p>
+                <p>Priyanshu Mondal</p>
+                <p>Reeshav Barik</p>
+                <p>Raju Barman</p>
+                <span class="date">2022</span>
+            </div>
+        </div>
+
+
+        <h2>Year 2021-22</h2>
+        <div class="timeline-container">
+            <div class="achievement-card">
+                <div class="icon">🌟</div>
+                <h3>Best Students Chapter (IKC)</h3>
+                <p>Jadavpur University</p>
+                <span class="date">2021</span>
+            </div>
+            <div class="achievement-card">
+                <div class="icon">🏆</div>
+                <h3>National Winner, ISHRAE SRPG</h3>
+                <p>Pritam Mitra</p>
+                <p>Bishal Roy</p>
+                <p>Shelly Dey</p>
+                <span class="date">2021</span>
+            </div>
+            <div class="achievement-card">
+                <div class="icon">🌟</div>
+                <h3>NSDC Winners</h3>
+                <p>Fahmid Zaman</p>
+                <p>Soumyadip Dhara</p>
+                <p>Soumyadip Bhattacherjee</p>
+                <p>Sayak Ray</p>
+                <span class="date">2021</span>
+            </div>
+            <div class="achievement-card">
+                <div class="icon">🌟</div>
+                <h3>1st Runners up, HVAC Hackathon</h3>
+                <p>Anwesha Das</p>
+                <p>Sagnik Sarkar</p>
+                <p>Niloy Sen</p>
+                <p>Shirsha Nandy</p>
+                <span class="date">2021</span>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

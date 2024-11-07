@@ -16,7 +16,9 @@ body {
             background-size: cover;
             padding-top: 70px; /* Space for fixed navbar */
             line-height: 1.5;
+            font-family: "Baloo 2", sans-serif;
         }
+
 
         /* Root Variables */
         :root {
@@ -348,7 +350,9 @@ body {
   font-weight: 600;
   margin-bottom: 0.5rem;
   text-align: center;
-  color: #0074b8; /* Replace with your ISHRAE blue color */
+  color: #ffffff; /* Replace with your ISHRAE white color */
+  text-shadow: 2px 2px #0d00ff; 
+  /* Text shadow */
 }
 
 /* Blue Line Styling */
@@ -361,7 +365,9 @@ body {
 .blue-line {
   width: 64px; /* Fixed width */
   height: 4px; /* Fixed height */
-  background-color: #0074b8; /* Replace with your ISHRAE blue color */
+  background-color: #ffffff;; /* Replace with your ISHRAE blue color */
+  box-shadow: 2px 2px #0d00ff; 
+  /* Text shadow */
 }
 
 /* Grid Container Styling */
@@ -420,7 +426,9 @@ body {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #000; /* Heading color (black) */
+  color: #ffffff; /* Replace with your ISHRAE blue color */
+  text-shadow: 2px 2px #0d00ff; 
+  /* Text shadow */
 }
 
 /* Section Text (Paragraph) Styling */
