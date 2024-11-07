@@ -20,6 +20,7 @@
         h1 {
             text-align: center;
             color: #333;
+            padding: 20px;
         }
         .grid {
             display: grid;
@@ -204,27 +205,70 @@ le>
             </ul>
         </nav>
     </header>
+    
         
     
     <div class="container">
         <h1>Faculty Advisor</h1>
         <div id="staff-grid" class="grid">
-            <!-- Staff members will be dynamically inserted here -->
+                <div class="card">
+                    <img src="../ev/sov.jpg" alt="Dr Sourav Sarkar">
+                    <div class="card-content">
+                        <h2>Dr Sourav Sarkar</h2>
+                    <p>Faculty Advisor</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../ev/acm.jpg" alt="Prof Achintya Mukhopadhyay">
+        
+                <div class="card-content">
+                    <h2>Prof Achintya Mukhopadhyay</h2>
+                    <p>Faculty Advisor</p>
+                </div>
+            </div>
+        </div>
+
+        <h1>Student Members</h1>
+        <div id="student-grid" class="grid">
+            <!-- Student members will be dynamically inserted here -->
+        </div>
+
+        <h1>Web Developers</h1>
+        <center>
+            <div id="staff-grid" class="grid">
+                <div class="card">
+                    <img src="../ev/nabu.jpg" alt="Nabyendu Das">
+                    <div class="card-content">
+                        <h2>Nabyendu Das</h2>
+                        
+                    </div>
+                </div>
+            <div class="card">
+                <img src="../ev/asm.PNG" alt="Prof Achintya Mukhopadhyay">
+        
+                <div class="card-content">
+                    <h2>Asmita Bagchi</h2>
+                    
+                </div>
+            </center>
+            </div>
         </div>
     </div>
 
     <script>
-        const staffMembers = [
-            {
-                name: "Dr Sourav Sarkar",
-                role: "Faculty Advisor",
-                imageUrl: "../ev/sov.jpg"
-            },
-            {
-                name: "Prof Achintya Mukhopadhyay",
-                role: "Faculty Advisor",
-                imageUrl: "../ev/acm.jpg"
-            },
+
+        function createStaffCard(member) {
+            return `
+                <div class="card">
+                    <img src="${member.imageUrl}" alt="${member.name}">
+                    <div class="card-content">
+                        <h2>${member.name}</h2>
+                        <p>${member.role}</p>
+                    </div>
+                </div>
+            `;
+        }
+        const studentMembers = [
             {
                 name: "Mrinmoy Tarafder",
                 role: "President",
@@ -297,34 +341,11 @@ le>
                 role: "Public Reach Incharge",
                 imageUrl: "../ev/srija.jpg"
             },
-            {
-                name: "Nabyendu Das",
-                role: "Web-Developers",
-                imageUrl: "../ev/nabu.jpg"
-            },
-            {
-                name: "Asmita Bagchi",
-                role: "Web-Developers",
-                imageUrl: "../ev/srija.jpg"
-            },
-
-        ];
-
-        function createStaffCard(member) {
-            return `
-                <div class="card">
-                    <img src="${member.imageUrl}" alt="${member.name}">
-                    <div class="card-content">
-                        <h2>${member.name}</h2>
-                        <p>${member.role}</p>
-                    </div>
-                </div>
-            `;
-        }
+        ]
 
         function renderStaffGrid() {
-            const gridElement = document.getElementById('staff-grid');
-            gridElement.innerHTML = staffMembers.map(createStaffCard).join('');
+            const gridElement = document.getElementById('student-grid');
+            gridElement.innerHTML = studentMembers.map(createStaffCard).join('');
         }
 
         // Render the staff grid when the page loads
