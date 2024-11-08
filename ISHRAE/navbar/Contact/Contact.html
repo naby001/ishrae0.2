@@ -1,189 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty and Staff</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+    <title>ISHRAE JU Students Chapter - Social Links</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-        
-
-         
-
-     
-
-
-
-       
-
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-           
-            background-size: cover;
-            padding-top: 70px;
-            /* Space for fixed navbar */
-            line-height: 1.5;
-        }
-
-        /* Root Variables */
         :root {
-            --r: rgb(230, 18, 18);
-            --g: rgb(21, 186, 21);
-            --b: rgb(17, 86, 206);
-            --y: #FFC200;
-            --fb: 'Baloo 2', sans-serif;
+            --bg-color: #1a1a2e;
+            --card-bg: #16213e;
+            --text-color: #e94560;
+            --text-secondary: #d2d8df;
+            --highlight-bg: rgba(233, 69, 96, 0.1);
+        }
+        h2 {
+            -webkit-text-fill-color: rgb(231, 255, 18);
         }
 
-        /* Header Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding: 2rem;
+            z-index: 1;
+            position: relative;
+        }
+
         header {
-            position: fixed;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.25rem;
+            font-weight: 300;
+            background-color: var(--highlight-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .social-links {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .social-card {
+            background-color: var(--card-bg);
+            border-radius: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .social-card::before {
+            content: '';
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #1f2937;
-            z-index: 1000;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-card:hover::before {
+            opacity: 1;
+        }
+
+        .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            margin-right: 1.5rem;
+            transition: transform 0.3s ease;
         }
 
-        /* Logo Container */
-        .logo-container {
-            display: flex;
-            align-items: center;
+        .social-card:hover .icon-wrapper {
+            transform: scale(1.1);
         }
 
-        .logo-container img {
-            width: 50px;
-            margin-right: 10px;
-        }
-
-        .logo-container span {
-            font-size: 1.5rem;
+        .icon-wrapper svg {
+            width: 30px;
+            height: 30px;
             color: white;
-            font-weight: bold;
-            font-family: var(--fb);
         }
 
-        /* Navigation Styles */
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
+        .social-info h2 {
+            margin: 0;
+            font-size: 1.25rem;
             font-weight: 600;
-            transition: color 0.3s ease;
         }
 
-        nav ul li a:hover {
-            color: var(--b);
-            text-decoration: underline;
+        .social-info p {
+            margin: 0.25rem 0 0;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
         }
 
-        /* Hamburger Menu Styles */
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: white;
-            font-size: 1.5rem;
+        .background-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: -1;
         }
 
-        /* Responsive Styles */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            nav ul {
-                position: absolute;
-                top: 60px;
-                left: 0;
-                right: 0;
-                background-color: #1f2937;
-                flex-direction: column;
-                align-items: center;
-                display: none;
-                padding: 1rem 0;
-            }
-
-            nav ul.show {
-                display: flex;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-            }
-
-            .nav-toggle {
-                display: block;
+            .background-video {
+                display:flex;
             }
         }
+ /* Back button styling */
+#backButton {
+  position: fixed;
+  top: 10px; /* Position 10px from the top */
+  left: 10px; /* Position 10px from the left */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+#backButton:hover {
+  background-color: #0056b3;
+}
+
+/* Page content styling */
+.content {
+  margin-top: 60px; /* Create space so content doesn't start directly under the button */
+}
+
+
     </style>
-
-
-
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-
 <body>
-
-
-
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <header>
-        <div class="logo-container">
-            <img src="/ISHRAE/navbar/ishju-removebg-preview.png" alt="Logo">
-            <a href="https://ishrae0-2-gqqc.vercel.app/">
-                <span>ISHRAE JU</span>
-            </a>
-        </div>
-        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="member.html">Membership</a></li>
-                <li><a href="competition.html">Competition</a></li>
-                <li><a href="achiveAsm.html">Achievement</a></li>
-                <li><a href="ourteam.html">Our Team</a></li>
-            </ul>
-        </nav>
-    </header>
+    <button id="backButton">← Home</button>
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="./loop.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
     
-
+    <div class="container">
+        <header>
+            <h1>ISHRAE JU</h1>
+            
+            <h2>Connect with us on social media!</h2>
+        </header>
+        <div class="social-links" id="socialLinks">
+            <!-- Social link cards will be inserted here by JavaScript -->
+        </div>
+    </div>
     <script>
+        const socialLinks = [
+        { name: "WhatsApp", icon: "message-circle", url: " https://chat.whatsapp.com/Hl0NJuou7ZHBxjtJHC2amd ", color: "#25D366" },
+            { name: "Facebook", icon: "facebook", url: "https://www.facebook.com/ishraeju", color: "#1877f2" },
+            { name: "Instagram", icon: "instagram", url: "https://www.instagram.com/ishrae_jadavpuruniversity", color: "#e4405f" },
+            { name: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/company/ishrae-jadavpur-university/posts/?feedView=all", color: "#0077b5" },
+            { name: "YouTube", icon: "youtube", url: "https://www.youtube.com/@ishraejadavpuruniversityst6204", color: "#ff0000" },
+           
+        ];
+
+        function createSocialCard(link) {
+            const card = document.createElement('a');
+            card.href = link.url;
+            card.target = "_blank";
+            card.rel = "noopener noreferrer";
+            card.className = "social-card";
+
+            card.innerHTML = `
+                <div class="icon-wrapper" style="background-color: ${link.color};">
+                    <i data-lucide="${link.icon}"></i>
+                </div>
+                <div class="social-info">
+                    <h2>${link.name}</h2>
+                    <p>Join us on ${link.name}</p>
+                </div>
+            `;
+
+            return card;
+        }
+
+        function renderSocialLinks() {
+            const container = document.getElementById('socialLinks');
+            socialLinks.forEach(link => {
+                const card = createSocialCard(link);
+                container.appendChild(card);
+            });
+            lucide.createIcons();
+        }
+
+        document.addEventListener('DOMContentLoaded', renderSocialLinks);
+        document.getElementById("backButton").addEventListener("click", function() {
+  window.history.back();
+});
 
     </script>
-</body>
 
+</body>
 </html>

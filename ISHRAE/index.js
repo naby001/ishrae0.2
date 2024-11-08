@@ -12,16 +12,7 @@ function showSlides() {
     setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 function toggleContactDetails(event) {
-    event.preventDefault(); // Prevents default link behavior
-    
-    const contactDetails = document.getElementById('contact-details');
-    
-    // Toggle the display of the contact details
-    if (contactDetails.style.display === 'block') {
-      contactDetails.style.display = 'none';
-    } else {
-      contactDetails.style.display = 'block';
-    }
+   
   }
   
   // Optional: Close the contact details when clicking outside of it
