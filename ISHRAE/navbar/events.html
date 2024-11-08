@@ -266,13 +266,15 @@ body {
                 title: "ISHRAE JU Placement Insight Series ",
                 description: "A series of interactive sessions with those who have placement and talk about their experiences and subsequent journey at Jadavpur University. ",
                 date: "2023-09-15",
-                image: "../ev/placement.jpeg"
+                image: "../ev/placement.jpeg",
+                link:"https://youtu.be/mpH65_rg7mw?si=JHfC0I1FvoWyXhoE"
             },
             {
                 title: "ISHRAE JU Alumni Interaction Series",
                 description: "A series of online interactive sessions where honorable Alumni of Jadavpur University, come and talk about their experiences at JU and subsequent JU journey. ",
                 date: "2023-10-02",
-                image: "../ev/alumini.jpeg"
+                image: "../ev/alumini.jpeg",
+                link:"https://youtu.be/FkwtkLXASFI?si=MfgPkzaQSP-YwhsJ"
             },
             {
                 title: "URJA 24!",
@@ -285,29 +287,38 @@ body {
                 title: "ISHRAE JU Knowledge Series",
                 description: "A platform that provides opportunity to the student members to explain certain interesting topics in lucid and presentable language. ",
                 date: "2023-11-05",
-                image: "../ev/knowledge.jpeg"
+                image: "../ev/knowledge.jpeg",
+                link:"https://youtu.be/9atyTflemAw?si=ni5cC7agrqrscQ3y"
             },
             {
                 title: "Tech Talk: Future of Sustainable Energy",
                 description: "A series of offline interactive sessions where honorable Alumni of Jadavpur University, come and talk about their different types of technical knowledge",
                 date: "2023-10-20",
-                image: "../ev/tech.jpeg"
+                image: "../ev/tech.jpeg",
+                link:"https://youtu.be/e8sMGjNOdmc?si=kt9GlAZoeKGGbw6q"
             }
            
         ];
 
         function createEventCard(event) {
-            return `
-                <div class="event-card">
-                    <img src="${event.image}" alt="${event.title}" class="event-image">
-                    <div class="event-details">
-                        <h2 class="event-title">${event.title}</h2>
-                        <p class="event-description">${event.description}</p>
-                        <p class="event-date">Date: ${event.date}</p>
-                    </div>
-                </div>
-            `;
-        }
+    return `
+        <div class="event-card">
+             <a href="${event.link || '#'}" target="_blank">
+            <img src="${event.image}" alt="${event.title}" class="event-image">
+            <div class="event-details">
+                <h2 class="event-title">
+                   ${event.title}
+                </h2>
+                <p class="event-description">${event.description}</p>
+                <p class="event-date">Date: ${event.date}</p>
+                 <h1 style="color: red; font-style: italic;">Click to Watch Video</h1>
+
+            </div>
+            </a>
+        </div>
+    `;
+}
+
 
         function renderEvents() {
             const container = document.getElementById('events-container');
