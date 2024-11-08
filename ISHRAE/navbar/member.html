@@ -133,11 +133,19 @@
 
         
         .dark-mode {
-            --bg-color: #1a1a1a;
-            --text-color: #f4f4f4;
-            --card-bg: #2c2c2c;
+            --bg-color: #ef0c0c;
+            --text-color: #6d4ef7;
+            
+            --card-bg: #302f2f;
             --highlight-bg: #4d4d00;
             --link-color: #66b3ff;
+            b{
+                color: #0977e4;
+            }
+            .list-decimal {
+                color: white;
+            }
+
         }
 
         body {
@@ -145,8 +153,10 @@
             line-height: 1.6;
             margin: 0;
           
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            background-size: cover;
+            
+          
+            background-image: url(https://t4.ftcdn.net/jpg/02/98/68/73/360_F_298687332_D0GAA6fAgr70NWtF8UKXPyLx0mTGug0x.jpg);
             transition: background-color 0.3s, color 0.3s;
         }
 
@@ -159,9 +169,7 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-        h1, h2 {
-            color: var(--text-color);
-        }
+       
 
         .header {
             display: flex;
@@ -269,7 +277,14 @@
         }
 
         a:hover {
+          
             text-decoration: underline;
+        }
+        b{
+            
+            text-align: center;
+            display: flex;
+            color: #030202;
         }
     </style>
 </head>
@@ -298,7 +313,7 @@
     </header>
     <div class="container" style="margin-top: 100px;">
         <div class="header">
-            <h1>ISHRAE Student Membership</h1>
+            <b>ISHRAE Student Membership</b>
             <div class="dark-mode-toggle">
                 <span>🌞</span>
                 <label class="switch">
@@ -315,8 +330,8 @@
         </div>
 
         <div id="NewMembers" class="tabcontent">
-            <h2>Steps for New Members:</h2>
-            <ol class="list-decimal pl-6">
+            <h2 style="color: red;">Steps for New Members:</h2>
+            <ol class="list-decimal pl-6" style=" line-height: 1.8;">
                 <li>Go to <a href="https://www.ishraehq.in/" target="_blank">https://www.ishraehq.in/</a>. Scroll down and click on "Student Member" tab.</li>
                 <li>3 types of student membership plans (1yr, 2yr, 3yr) will appear. Select the plan of your choice by clicking "Join Now" below the respective membership plan.</li>
                 <li>Accept the "TERMS AND CONDITIONS" by clicking the check box. Then select "Join Now".</li>
@@ -334,8 +349,8 @@
         </div>
 
         <div id="ExistingMembers" class="tabcontent">
-            <h2>Steps for Existing Members to Renew Membership for 2023-2024:</h2>
-            <ol>
+            <h2 style="color: red;">Steps for Existing Members to Renew Membership for 2023-2024:</h2>
+            <ol class="list-decimal pl-6" style=" line-height: 1.8;">
                 <li>Visit the website of ISHRAE: <a href="https://ishrae.in/" target="_blank">https://ishrae.in/</a></li>
                 <li>Go to Student Zone and log in using your membership ID and password.</li>
                 <li>A pop up message will appear that will show to renew your membership.</li>
